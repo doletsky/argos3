@@ -1,0 +1,116 @@
+User-Agent: *
+Disallow: # empty Disallow instruction SHOULD be there
+Disallow: */index.php
+Disallow: /bitrix/
+Disallow: /*show_include_exec_time=
+Disallow: /*show_page_exec_time=
+Disallow: /*show_sql_stat=
+Disallow: /*bitrix_include_areas=
+Disallow: /*clear_cache=
+Disallow: /*clear_cache_session=
+Disallow: /*ADD_TO_COMPARE_LIST
+Disallow: /*ORDER_BY
+Disallow: /*PAGEN
+Disallow: /*?print=
+Disallow: /*&print=
+Disallow: /*?sort=
+Disallow: /*&sort=
+Disallow: /*print_course=
+Disallow: /*?action=
+Disallow: /*&action=
+Disallow: /*register=
+Disallow: /*forgot_password=
+Disallow: /*change_password=
+Disallow: /*login=
+Disallow: /*logout=
+Disallow: /*auth=
+Disallow: /*backurl=
+Disallow: /*back_url=
+Disallow: /*BACKURL=
+Disallow: /*BACK_URL=
+Disallow: /*back_url_admin=
+Disallow: /*?utm_source=
+Disallow: /production/catalog_online/drivers
+Disallow: /eshop_app
+Disallow: /dompdf_lib
+Disallow: /offers
+Disallow: /phpexcel_lib
+Disallow: /content
+
+Sitemap: http://www.argos-trade.com/sitemap.xml
+Crawl-delay: 2
+Allow: /*argos-trade.com/sitemap.xml
+Sitemap: http://argos-trade.com/sitemap.xml
+
+User-Agent: Yandex
+Disallow: # empty Disallow instruction SHOULD be there
+Allow: /*argos-trade.com/sitemap.xml
+Host: www.argos-trade.com
+
+User-Agent: YandexBot
+Disallow: # empty Disallow instruction SHOULD be there
+Disallow: */index.php
+Disallow: /bitrix/
+Disallow: /*show_include_exec_time=
+Disallow: /*show_page_exec_time=
+Disallow: /*show_sql_stat=
+Disallow: /*bitrix_include_areas=
+Disallow: /*clear_cache=
+Disallow: /*clear_cache_session=
+Disallow: /*ADD_TO_COMPARE_LIST
+Disallow: /*ORDER_BY
+Disallow: /*PAGEN
+Disallow: /*?print=
+Disallow: /*&print=
+Disallow: /*?sort=
+Disallow: /*&sort=
+Disallow: /*print_course=
+Disallow: /*?action=
+Disallow: /*&action=
+Disallow: /*register=
+Disallow: /*forgot_password=
+Disallow: /*change_password=
+Disallow: /*login=
+Disallow: /*logout=
+Disallow: /*auth=
+Disallow: /*backurl=
+Disallow: /*back_url=
+Disallow: /*BACKURL=
+Disallow: /*BACK_URL=
+Disallow: /*back_url_admin=
+Disallow: /*?utm_source=
+Disallow: /production/catalog_online/drivers
+Disallow: /eshop_app
+Disallow: /dompdf_lib
+Disallow: /offers
+Disallow: /phpexcel_lib
+Disallow: /content
+Allow: /*argos-trade.com/sitemap.xml
+
+User-Agent: YandexMedia
+Disallow: # empty Disallow instruction SHOULD be there
+Allow: /*argos-trade.com/sitemap.xml
+
+User-Agent: YandexImages
+Disallow: # empty Disallow instruction SHOULD be there
+Allow: /*argos-trade.com/sitemap.xml
+
+User-Agent: YandexMetrika
+Disallow: # empty Disallow instruction SHOULD be there
+Allow: /*argos-trade.com/sitemap.xml
+
+User-Agent: Googlebot
+Disallow: # empty Disallow instruction SHOULD be there
+Allow: /*argos-trade.com/sitemap.xml
+
+User-Agent: Googlebot-News
+Disallow: # empty Disallow instruction SHOULD be there
+Allow: /*argos-trade.com/sitemap.xml
+
+User-Agent: Googlebot-Video
+Disallow: # empty Disallow instruction SHOULD be there
+Allow: /*argos-trade.com/sitemap.xml
+
+User-Agent: Googlebot-Mobile
+Disallow: # empty Disallow instruction SHOULD be there
+Allow: /*argos-trade.com/sitemap.xml
