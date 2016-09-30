@@ -1,0 +1,98 @@
+table.catalog_item_ips_table {
+	margin-bottom: 20px;
+}
+table.catalog_item_ips_table, table.catalog_item_ips_table table{
+	width:100%;
+}
+.catalog_item_ips table.catalog_item_ips_table table {
+	border-top:0;
+}
+.catalog_item_ips table.catalog_item_ips_table td.version {
+	width:200px;
+}
+.catalog_item_ips table.catalog_item_ips_table table td.big {
+	height: 40px;
+	vertical-align: middle;
+	
+}
+.catalog_item_ips table.catalog_item_ips_table table td.big.big2 {
+	height: 70px;
+	vertical-align: middle;
+	
+}
+.catalog_item_ips table.catalog_item_ips_table table td {
+
+	border-right: 0;
+	border-bottom: 0;
+	border-left: 0;
+	width:130px;
+	
+}
+.catalog_item_ips table.catalog_item_ips_table table td:nth-child(even) {
+	border-left: solid 1px #d6d6d6;
+}
+.catalog_item_ips table.catalog_item_ips_table table tr.img td {
+	text-align: center;
+	vertical-align: middle;
+	height: 100px;
+}
+.catalog_item_ips table.catalog_item_ips_table table tr.img a {
+	display: inline-block;
+}
+.catalog_item_ips table.catalog_item_ips_table td tr.img .ips_img {
+    width: 97px;
+    height: 73px;
+    position: relative;
+    vertical-align: middle;
+    display: table-cell;
+}
+.catalog_item_wrap .catalog_item_ips table.catalog_item_ips_table tr.links td.header_middle
+{
+	vertical-align: middle;
+	text-align: left;
+	padding: 2px 0 1px 5px;
+	font: bold 12px/14px Arial;
+}
+.catalog_item_wrap .catalog_item_ips table.catalog_item_ips_table tr.links td
+{
+	vertical-align: top;
+	margin: 0;
+	padding: 0;
+	border-top: 0;
+}
+.catalog_item_wrap .catalog_item_ips table.catalog_item_ips_table tr.links table td
+{
+	vertical-align: middle;
+	padding: 4px 0;
+	border-bottom: 0;
+}
+.catalog_item_wrap .catalog_item_ips table.catalog_item_ips_table tr.links table tr:nth-child(even) {
+	background: #e9e9e9;
+}
+.catalog_category {
+    color: #a01f1b;
+    font: bold 16px/16px Arial;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.tabs_simple_style {
+	padding:0 0 20px 0;
+}
+.tabs_simple_style ul {
+	width: 230px;
+	float:left;
+	margin-top: 20px;
+}
+.tabs_simple_style .tab_simple_style_link {
+	width: 228px;
+	font: normal 14px/32px Arial;
+	display: block;
+	cursor: pointer;
+	vertical-align: middle;
+	padding-right: 0;
+}
+.tabs_simple_style .tab_simple_style_link a.link {
+    border-bottom: dashed 1px #a01f1b;
+    color: #a01f1b;
+    text-decoration: none;
+}

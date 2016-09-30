@@ -1,0 +1,13 @@
+h2, h3 {
+   font-weight: bold !important;
+   margin-bottom: 5px; 
+}
+ol, ul {
+    list-style: inherit;
+    margin-bottom: 5px;
+}
+
+li {
+   margin-top: 5px; 
+   margin-bottom: 5px; 
+}
