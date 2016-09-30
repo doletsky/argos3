@@ -1,0 +1,81 @@
+<?php return array (
+  'sans-serif' => 
+  array (
+    'normal' => DOMPDF_FONT_DIR . 'Helvetica',
+    'bold' => DOMPDF_FONT_DIR . 'Helvetica-Bold',
+    'italic' => DOMPDF_FONT_DIR . 'Helvetica-BoldOblique',
+    'bold_italic' => DOMPDF_FONT_DIR . 'Helvetica-BoldOblique',
+  ),
+  'times' => 
+  array (
+    'normal' => DOMPDF_FONT_DIR . 'Times-Roman',
+    'bold' => DOMPDF_FONT_DIR . 'Times-Bold',
+    'italic' => DOMPDF_FONT_DIR . 'Times-BoldItalic',
+    'bold_italic' => DOMPDF_FONT_DIR . 'Times-BoldItalic',
+  ),
+  'times-roman' => 
+  array (
+    'normal' => DOMPDF_FONT_DIR . 'Times-Roman',
+    'bold' => DOMPDF_FONT_DIR . 'Times-Bold',
+    'italic' => DOMPDF_FONT_DIR . 'Times-BoldItalic',
+    'bold_italic' => DOMPDF_FONT_DIR . 'Times-BoldItalic',
+  ),
+  'courier' => 
+  array (
+    'normal' => DOMPDF_FONT_DIR . 'Courier',
+    'bold' => DOMPDF_FONT_DIR . 'Courier-Bold',
+    'italic' => DOMPDF_FONT_DIR . 'Courier-BoldOblique',
+    'bold_italic' => DOMPDF_FONT_DIR . 'Courier-BoldOblique',
+  ),
+  'helvetica' => 
+  array (
+    'normal' => DOMPDF_FONT_DIR . 'Helvetica',
+    'bold' => DOMPDF_FONT_DIR . 'Helvetica-Bold',
+    'italic' => DOMPDF_FONT_DIR . 'Helvetica-BoldOblique',
+    'bold_italic' => DOMPDF_FONT_DIR . 'Helvetica-BoldOblique',
+  ),
+  'zapfdingbats' => 
+  array (
+    'normal' => DOMPDF_FONT_DIR . 'ZapfDingbats',
+    'bold' => DOMPDF_FONT_DIR . 'ZapfDingbats',
+    'italic' => DOMPDF_FONT_DIR . 'ZapfDingbats',
+    'bold_italic' => DOMPDF_FONT_DIR . 'ZapfDingbats',
+  ),
+  'serif' => 
+  array (
+    'normal' => DOMPDF_FONT_DIR . 'times',
+    'bold' => DOMPDF_FONT_DIR . 'timesbd',
+    'italic' => DOMPDF_FONT_DIR . 'timesi',
+    'bold_italic' => DOMPDF_FONT_DIR . 'timesbi',
+  ),
+  'monospace' => 
+  array (
+    'normal' => DOMPDF_FONT_DIR . 'Courier',
+    'bold' => DOMPDF_FONT_DIR . 'Courier-Bold',
+    'italic' => DOMPDF_FONT_DIR . 'Courier-BoldOblique',
+    'bold_italic' => DOMPDF_FONT_DIR . 'Courier-BoldOblique',
+  ),
+  'fixed' => 
+  array (
+    'normal' => DOMPDF_FONT_DIR . 'Courier',
+    'bold' => DOMPDF_FONT_DIR . 'Courier-Bold',
+    'italic' => DOMPDF_FONT_DIR . 'Courier-BoldOblique',
+    'bold_italic' => DOMPDF_FONT_DIR . 'Courier-BoldOblique',
+  ),
+  'give you glory' => 
+  array (
+    'normal' => DOMPDF_FONT_DIR . 'f3e9cf17e356116bf84868b48a4fe23f',
+  ),
+  'wallpoet' => 
+  array (
+    'normal' => DOMPDF_FONT_DIR . '905834bed109196e7a412fa5899bd071',
+  ),
+  'love ya like a sister' => 
+  array (
+    'normal' => DOMPDF_FONT_DIR . '2328b2ffd55ffbee320919432cfdd18e',
+  ),
+  'ubuntu mono' => 
+  array (
+    'normal' => DOMPDF_FONT_DIR . 'b3775c7b56c980cedaeada4aea70bc93',
+  ),
+) ?>
