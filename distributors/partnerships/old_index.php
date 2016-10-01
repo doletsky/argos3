@@ -1,4 +1,5 @@
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+LocalRedirect("index.php", true, "301");
 $APPLICATION->SetPageProperty("description", "Партнеры, дистрибьюторы Аргос-Трейд. Перечень партнеров у которых можно купить светодиодную комплектацию и светильники с сортировкой по регионам или по алфавиту.");
 $APPLICATION->SetPageProperty("keywords", "этм, русский свет, техносвет, купить светодиодные модули, купить светодиодные драйверы, купить светильники жкх");
 $APPLICATION->SetPageProperty("title", "Где можно купить светодиодные модули, светодиодные драйверы и светильники?");
