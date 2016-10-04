@@ -669,7 +669,7 @@ if($aUserField[UF_CATALOG_TITLE][VALUE] != '') {?>
 <script type="text/javascript">
     jQuery(document).ready(function() {
       document.title = '<?=$APPLICATION->ShowTitle(false);?>';
-	  document.title = '<?=$aUserField[UF_CATALOG_TITLE][VALUE];?>';
+	 // document.title = '<?//=$aUserField[UF_CATALOG_TITLE][VALUE];?>';
     });
 </script>
 

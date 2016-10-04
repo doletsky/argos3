@@ -15,7 +15,7 @@ $this->setFrameMode(true);
 if ($arResult['PROPERTIES']['CATALOG_TITLE']['VALUE']>''){
 $APPLICATION->SetTitle($arResult['PROPERTIES']['CATALOG_TITLE']['VALUE']);
 $value=$arResult['PROPERTIES']['CATALOG_TITLE']['VALUE'];
-$APPLICATION->SetPageProperty("title", $value);
+$APPLICATION->SetPageProperty("title", $value);//иное значение title присваивается в строке 113 по условию
 }
 if ($arResult['PROPERTIES']['CATALOG_META_DESCRIPTION']['VALUE']>''){
 	//$APPLICATION->SetTitle($arResult['PROPERTIES']['CATALOG_META_DESCRIPTION']['VALUE']);
@@ -111,7 +111,7 @@ if ('Y' == $arParams['DISPLAY_NAME'])
     <h1><span><?=$arResult['PROPERTIES']['CATALOG_H1']['VALUE']?></span></h1>
 	<?} else {?>
    <h1><span><?=$arResult["NAME"];?></span></h1>
-    <?}?>
+    <?$APPLICATION->SetPageProperty("title", $arResult["NAME"]);}?>
 </div>
 
 <?
