@@ -110,7 +110,7 @@ if ('Y' == $arParams['DISPLAY_NAME'])
 
     <h1><span><?=$arResult['PROPERTIES']['CATALOG_H1']['VALUE']?></span></h1>
 	<?} else {?>
-   <h1><span><?=$arResult["NAME"];?></span></h1>
+   <h1><span data-target="test"><?=$arResult["NAME"];?></span></h1>
     <?$APPLICATION->SetPageProperty("title", $arResult["NAME"]);}?>
 </div>
 
