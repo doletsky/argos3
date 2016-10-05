@@ -1,4 +1,5 @@
-<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
+<?
 /** @var array $arParams */
 /** @var array $arResult */
 /** @global CMain $APPLICATION */
@@ -226,7 +227,7 @@ if ($arResult['SHOW_SLIDER'])
 </div>
 		</div>
 		<div class="bx_rt">
-            
+
                 <?
                   //if ('' != $arResult['DETAIL_TEXT'])
                     if ('' != $arResult['PROPERTIES']['CATALOG_PREVIEW']['VALUE']['TEXT'])
@@ -240,18 +241,18 @@ if ($arResult['SHOW_SLIDER'])
                             <p><?=$arResult['DETAIL_TEXT']; ?></p>
                         <?endif;*/?>
                         <? echo $arResult['PROPERTIES']['CATALOG_PREVIEW']['VALUE']['TEXT'];?>
-                        
+
                       <a href="#descr">подробнее</a>  <br /><br />
                     </div>
-                    
+
                 <?
                 }
                 ?>
 
 
 
-     
-        
+
+
 <?
 $useBrands = ('Y' == $arParams['BRAND_USE']);
 $useVoteRating = ('Y' == $arParams['USE_VOTE_RATING']);
@@ -578,15 +579,15 @@ unset($showAddBtn, $showBuyBtn);
 Звоните 8-800-200-19-83
 <br /><br />
 Пишите на почту <br />
-<a href="mailto:kunilovskiy@argos-trade.com" style="padding-top: 7px;float: left;">kunilovskiy@argos-trade.com</a> 
+<a href="mailto:kunilovskiy@argos-trade.com" style="padding-top: 7px;float: left;">kunilovskiy@argos-trade.com</a>
 </div>
 <div id="u121" class="ax_default paragraph" style="font-size: 13px; color: #333333;width: 50%; float: left; ">
 
-	<?if(!empty($arResult['PROPERTIES']['PDF_OFFERS_TECHNICAL_CHARACTERISTICS']['VALUE'])):?>             
+	<?if(!empty($arResult['PROPERTIES']['PDF_OFFERS_TECHNICAL_CHARACTERISTICS']['VALUE'])):?>
 		<a class="pdf_catalog_link" href="<?=$arResult['PROPERTIES']['PDF_OFFERS_TECHNICAL_CHARACTERISTICS']['VALUE']['URL'];?>">
 			Технические характеристики
-		</a>            
-	<?endif;?> 
+		</a>
+	<?endif;?>
 </div>
 
 
@@ -596,20 +597,20 @@ unset($showAddBtn, $showBuyBtn);
 Для получения статуса дистрибьютора и коммерческих условий, необходимо связаться с торговым отделом по вышеуказанному телефону.
 </div>
 
- 	<?if(!empty($arResult['PROPERTIES']['PDF_TECHNICAL_CHARACTERISTICS']['VALUE'])):?>             
+ 	<?if(!empty($arResult['PROPERTIES']['PDF_TECHNICAL_CHARACTERISTICS']['VALUE'])):?>
 		<a class="pdf_catalog_link" href="<?=$arResult['PROPERTIES']['PDF_TECHNICAL_CHARACTERISTICS']['VALUE']['URL'];?>">
 			Протоколы испытаний
-		</a>            
-	<?endif;?>           
+		</a>
+	<?endif;?>
 
 
 			<div class="clb"></div>
 		</div>
 
 		<div class="bx_md">
-        
-        
-        
+
+
+
 <section class="tabs">
 	<input id="tab_1" type="radio" name="tab" checked="checked" />
 	<input id="tab_2" type="radio" name="tab" />
@@ -621,7 +622,7 @@ unset($showAddBtn, $showBuyBtn);
 	<label for="tab_4" id="tab_l4">Сертификаты</label>
     <?if(stristr($APPLICATION->GetCurPage(), 'draivery') === FALSE) {?>
       <label for="tab_3" id="tab_l3">IES-файл</label>
-    <?}?>    
+    <?}?>
 
     <label for="tab_5" id="tab_l5">Оплата и доставка</label>
 	<div style="clear:both"></div>
@@ -637,12 +638,12 @@ unset($showAddBtn, $showBuyBtn);
                     <div class="bx_item_description">
                         <?if ('html' == $arResult['PREVIEW_TEXT_TYPE']):?>
                         <div style="color: #0083D3; font-size: 17px; font-weight: bold; line-height: 35px;">
-                        	
+
                         </div>
                             <?=$arResult['PREVIEW_TEXT'];?>
                         <?else:?>
                         <div style="color: #0083D3; font-size: 17px; font-weight: bold; line-height: 35px;">
-                        	
+
                         </div>
                             <p><?=$arResult['PREVIEW_TEXT']; ?></p>
                         <?endif;?>
@@ -656,7 +657,7 @@ unset($showAddBtn, $showBuyBtn);
 		<div id="tab_c2">
 <div class="props">
 	<div class="prop_block_name" style="">
-		
+
 	</div>
 	<table>
 		<?
@@ -673,11 +674,11 @@ unset($showAddBtn, $showBuyBtn);
 		<?endforeach;?>
 	</table>
 </div>
-        
+
         <br />
 		</div>
 		<div id="tab_c3">
-        
+
 
 <?//print_r($arResult['PROPERTIES']['IES']['VALUE'])?>
 
@@ -690,32 +691,32 @@ unset($showAddBtn, $showBuyBtn);
                                     $arSelect = Array("ID", "IBLOCK_ID", "NAME", "DATE_ACTIVE_FROM","PROPERTY_*");//IBLOCK_ID и ID обязательно должны быть указаны, см. описание arSelectFields выше
                                     $arFilter = Array("IBLOCK_ID"=>$ar_res[IBLOCK_ID],"ID"=>$ar_res[ID], "ACTIVE_DATE"=>"Y", "ACTIVE"=>"Y");
                                     $res = CIBlockElement::GetList(Array(), $arFilter, false, Array("nPageSize"=>50), $arSelect);
-                                    while($ob = $res->GetNextElement()){ 
-                                      $arFields = $ob->GetFields();  
+                                    while($ob = $res->GetNextElement()){
+                                      $arFields = $ob->GetFields();
                                       //print_r($arFields);
                                       $arProps = $ob->GetProperties();
                                       //print_r($arProps);
-                                    }                                    
-                                    
+                                    }
+
 
 
 									if($arProps['PROPERTIES']['PROTOCOLS_GROUP']["VALUE"]!=''){
-										
+
 										$VALUES = array();
 										$arSelect = array("ID", "NAME", "PROPERTY_MODEL");
 										$ar_result=CIBlockElement::GetList(Array("NAME"=>"ASC"), Array("IBLOCK_ID"=>$arFields['IBLOCK_ID'], "PROPERTY_PROTOCOLS_GROUP"=>$arResult['PROPERTIES']['PROTOCOLS_GROUP']["VALUE"]), $arSelect);
 										while($res=$ar_result->GetNext())
-										{									
-											if($res['CNT']>0)										{			
-												
-												$TmpID = $res["ID"];										
+										{
+											if($res['CNT']>0)										{
+
+												$TmpID = $res["ID"];
 												$Obj = CCatalogProduct::GetByIDEx($TmpID);
-												
+
 												$res1 = CIBlockElement::GetProperty($Obj["IBLOCK_ID"], $TmpID, array(), array("CODE" => "IES"));
 												while ($ob = $res1->GetNext())
-												{											
+												{
 													$VALUES[] = array($ob['VALUE'],$ob['DESCRIPTION']);
-												}											
+												}
 											}
 										}
 										foreach($VALUES as $file_ies_id){
@@ -728,8 +729,8 @@ unset($showAddBtn, $showBuyBtn);
 											}
 										}
 									}else{
-											
-										$files_ies=$arResult['PROPERTIES']['IES']['VALUE'];	
+
+										$files_ies=$arResult['PROPERTIES']['IES']['VALUE'];
 										if($files_ies != '') {
 											$count=0;
 											foreach ($files_ies as $file_ies_id)
@@ -741,29 +742,29 @@ unset($showAddBtn, $showBuyBtn);
 												$count++;
 											}
 										}
-											
+
 									}
 ?>
 
 
 
-        
+
      	<?/*if(!empty($arResult['PROPERTIES']['PDF_OFFERS_TECHNICAL_CHARACTERISTICS']['VALUE'])):
 
 $path_file = $arResult['PROPERTIES']['PDF_OFFERS_TECHNICAL_CHARACTERISTICS']['VALUE']['URL'];
-?>        
-<iframe src="https://docs.google.com/viewer?url=http://<?=$_SERVER['SERVER_NAME'];?><?=$path_file?>&embedded=true" 
+?>
+<iframe src="https://docs.google.com/viewer?url=http://<?=$_SERVER['SERVER_NAME'];?><?=$path_file?>&embedded=true"
 style="width: 100%; height: 600px;" frameborder="0">Ваш браузер не поддерживает фреймы</iframe>
 
 		<?endif;*/?>
         <br />
         </div>
-        
+
 		<div id="tab_c4">
 						<?
 						//инфоблоки для сертификатов
 						$iblock_id_cert=7;
-						
+
 						//Если указана группа для товаров
 						if($arResult['PROPERTIES']['PROTOCOLS_GROUP']["VALUE"]!='')
 						{
@@ -771,16 +772,16 @@ style="width: 100%; height: 600px;" frameborder="0">Ваш браузер не �
 							$ar_result=CIBlockElement::GetList(Array("NAME"=>"ASC"), Array("IBLOCK_ID"=>$arResult['IBLOCK_ID'], "PROPERTY_PROTOCOLS_GROUP"=>$arResult['PROPERTIES']['PROTOCOLS_GROUP']["VALUE"]), $arSelect);
 							while($res=$ar_result->GetNext())
 							{
-							
+
 								if($res['CNT']>0)
 								{
 									?>
 										<div><?=$res['NAME']?></div>
 											<?
 											$item_id=$res['ID'];
-												
+
 											$arr_certificates=array();//массив сертификатов
-											
+
 											//Привязка к элементу
 											$arSelectCert = array("ID", "NAME", "PROPERTY_USE_IN_ELEMENT", "PROPERTY_CERTIFICATE_PROTOCOLS_FILES");
 											$ar_result_cert=CIBlockElement::GetList(Array("SORT"=>"ASC"), Array("IBLOCK_ID"=>$iblock_id_cert, "PROPERTY_USE_IN_ELEMENT"=>$item_id), $arSelectCert);
@@ -798,8 +799,8 @@ style="width: 100%; height: 600px;" frameborder="0">Ваш браузер не �
 													}
 												}
 											}
-											
-											//Привязка к предложению												
+
+											//Привязка к предложению
 											if(SITE_DIR=='/'){
 												$offer_iblock_id=4;
 											}else{
@@ -807,7 +808,7 @@ style="width: 100%; height: 600px;" frameborder="0">Ваш браузер не �
 											}
 											$arSelectOffers = array("ID");
 											$arResOffers = CIBlockElement::GetList(Array("SORT"=>"ASC"), Array("IBLOCK_ID"=>$offer_iblock_id, "PROPERTY_MODEL"=>$item_id), $arSelectOffers);
-											
+
 											while($arOffer = $arResOffers->GetNext())
 											{
 												$arSelectCert = array("ID", "NAME", "PROPERTY_USE_IN_ELEMENT", "PROPERTY_CERTIFICATE_PROTOCOLS_FILES");
@@ -827,15 +828,15 @@ style="width: 100%; height: 600px;" frameborder="0">Ваш браузер не �
 													}
 												}
 											}
-											
-											
+
+
 											//Привязка к разделу
 											$sec_id=$res['IBLOCK_SECTION_ID'];
-												
+
 											$iblock_id=$arResult['IBLOCK_ID'];
 											$arr_section=array();//массив для всех родительских разделов
 											//получение всех секций для текущего элемента
-											$rsPath = GetIBlockSectionPath($iblock_id, $sec_id); 
+											$rsPath = GetIBlockSectionPath($iblock_id, $sec_id);
 											while($arPath=$rsPath->GetNext()) {
 												$arr_section[]=$arPath['ID'];
 											}
@@ -872,7 +873,7 @@ style="width: 100%; height: 600px;" frameborder="0">Ваш браузер не �
 									<?
 									$item_id=$arResult['ID'];
 									$arr_certificates=array();//массив сертификатов
-									//Привязка к предложению 
+									//Привязка к предложению
 									$arSelectCert = array("ID", "NAME", "PROPERTY_USE_IN_ELEMENT", "PROPERTY_CERTIFICATE_PROTOCOLS_FILES");
 									$ar_result_cert=CIBlockElement::GetList(Array("SORT"=>"ASC"), Array("IBLOCK_ID"=>$iblock_id_cert, "PROPERTY_USE_IN_ELEMENT"=>$item_id), $arSelectCert);
 									while($cert=$ar_result_cert->GetNext())
@@ -883,7 +884,7 @@ style="width: 100%; height: 600px;" frameborder="0">Ваш браузер не �
 											if (!in_array($link, $arr_certificates))//если сертификат еще не выведен
 											{
 												?>
-                                                <a class="pdf_catalog_link" target="_blank" href="<?=$link?>"><?=$cert['NAME']?></a> 
+                                                <a class="pdf_catalog_link" target="_blank" href="<?=$link?>"><?=$cert['NAME']?></a>
 												<?
 												$arr_certificates[]=$link;
 											}
@@ -902,7 +903,7 @@ style="width: 100%; height: 600px;" frameborder="0">Ваш браузер не �
 											if (!in_array($link, $arr_certificates))//если сертификат еще не выведен
 											{
 												?>
-                                                <a class="pdf_catalog_link" target="_blank" href="<?=$link?>"><?=$cert['NAME']?></a> 
+                                                <a class="pdf_catalog_link" target="_blank" href="<?=$link?>"><?=$cert['NAME']?></a>
 												<?
 												$arr_certificates[]=$link;
 											}
@@ -916,7 +917,7 @@ style="width: 100%; height: 600px;" frameborder="0">Ваш браузер не �
                                          if($ar_res = $res->GetNext()){
                                           $res_sec = CIBlockSection::GetByID($ar_res[IBLOCK_SECTION_ID]);
                                             if($ar_res_sec = $res_sec->GetNext()){
-                                                
+
                                               }
                                            }
                                      }
@@ -925,8 +926,8 @@ style="width: 100%; height: 600px;" frameborder="0">Ваш браузер не �
                                     $nav = CIBlockSection::GetNavChain(false, $sec_id);
                                      while($arItem = $nav->Fetch()){
                                      $ITEMS[] = $arItem;
-                                   }                                    
-                                    
+                                   }
+
 									//для каждого раздела ищем совпадающие сертификаты
 									foreach ($ITEMS as $section)
 									{
@@ -957,15 +958,15 @@ style="width: 100%; height: 600px;" frameborder="0">Ваш браузер не �
          <br />
         </div>
 		<div id="tab_c5">
-        
+
 <div id="u121" class="ax_default paragraph" style="font-size: 14px; color: #454A4C; float: left; line-height: 18px;">
 Компания работает только с юридическими лицами  по счету.<br />
-Если Вы физическое лицо – для покупки обращайтесь к нашим дистрибьюторам: 
+Если Вы физическое лицо – для покупки обращайтесь к нашим дистрибьюторам:
 <br /><br />
 Отгрузка производится от 1 шт., по всей территории Российской Федерации. По вопросам доставки за пределы РФ просим Вас связаться я торговым отделом по телефонам:
 <br /><br />
 <span style="color: blue;">
-+7-812-458-55-63<br /> 
++7-812-458-55-63<br />
 +7-812-458-55-64
 </span>
 <br /><br />
@@ -975,7 +976,7 @@ style="width: 100%; height: 600px;" frameborder="0">Ваш браузер не �
 <br /><br /><br />
 </div>
 		</div>
-        
+
 	</div>
 </section>
 
@@ -983,23 +984,23 @@ style="width: 100%; height: 600px;" frameborder="0">Ваш браузер не �
 
 <div style="clear: both;"></div>
 <? if (!empty($arResult[PROPERTIES][PERELINKS][VALUE])){?>
-<span style="float: left; font-size: 24px; padding-top: 10px;">Вам так же будет интересно</span>    
+<span style="float: left; font-size: 24px; padding-top: 10px;">Вам так же будет интересно</span>
 <?}?>
 
 <br /><br />
-<div style="float: left;">          
+<div style="float: left;">
 <?
 foreach ($arResult[PROPERTIES][PERELINKS][VALUE] as $perelink) {
 
 $arSelect = Array("ID", "IBLOCK_ID", "NAME", "DATE_ACTIVE_FROM","PREVIEW_PICTURE", "PROPERTY_*");//IBLOCK_ID и ID обязательно должны быть указаны, см. описание arSelectFields выше
 $arFilter = Array("IBLOCK_ID"=>$arResult[IBLOCK_ID],"ID"=>$perelink, "ACTIVE_DATE"=>"Y", "ACTIVE"=>"Y");
 $res = CIBlockElement::GetList(Array(), $arFilter, false, Array("nPageSize"=>50), $arSelect);
-while($ob = $res->GetNextElement()){ 
- $arFields = $ob->GetFields();  
+while($ob = $res->GetNextElement()){
+ $arFields = $ob->GetFields();
 ?>
 
 <div style="position: relative; float: left; width: 210px;">
-<img src="<?=CFile::GetPath($arFields['PREVIEW_PICTURE'])?>" width="150"> 
+<img src="<?=CFile::GetPath($arFields['PREVIEW_PICTURE'])?>" width="150">
 <?$mxResult = CCatalogSku::GetProductInfo($arFields[ID]);
 if (is_array($mxResult))
   {
@@ -1018,15 +1019,15 @@ if (is_array($mxResult))
 <a style="color: #393939; font: normal 16px/49px Tahoma;padding-left: 10px;" href="<?=$ssylka?>" >Подробнее</a>
 </div>
 <?}?>
-    
-<?}?>        
+
+<?}?>
 </div>
 
 <?$mxResult = CCatalogSku::GetProductInfo($arResult[ID]);
 if (is_array($mxResult))
   {
     //echo 'ID товара = '.$mxResult['ID'];
-  
+
     $res = CIBlockElement::GetByID($mxResult['ID']);
     if($ar_res = $res->GetNext()){
          $res_sec = CIBlockSection::GetByID($ar_res[IBLOCK_SECTION_ID]);
@@ -1038,8 +1039,8 @@ if (is_array($mxResult))
 
 			<?	//$APPLICATION->AddChainItem("Каталог", "/catalog/");
 	//$APPLICATION->AddChainItem($ar_res_sec[NAME], '/catalog/'.$ar_res_sec[CODE]);
-?>    
-        
+?>
+
 
 		</div>
 
