@@ -393,5 +393,10 @@ $filterView = (COption::GetOptionString("main", "wizard_template_id", "eshop_ada
 	),
 	false
 );?>
+<script>
+    $(document).ready(function(){
+        document.title=$('h1 span').html();
+    });
+</script>
 </div>
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
