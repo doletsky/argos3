@@ -57,7 +57,7 @@ CJSCore::Init(array("fx"));
 <!-- Google Analytics counter -->
 </head>
 <body>
-	<script type="text/javascript" src="//perezvoni.com/files/widgets/4367-9aec2dcb051d4f4ca3-b051d4f4ca3a0836-6-dcb051d4f4ca.js" charset="UTF-8"></script>
+<script crossorigin="anonymous" async type="text/javascript" src="//api.pozvonim.com/widget/callback/v3/43074ca8bf59cb0c52190db412bc1700/connect" id="check-code-pozvonim" charset="UTF-8"></script>
 <!-- BEGIN JIVOSITE CODE {literal} -->
 <script type='text/javascript'>
 (function(){ var widget_id = 'fwYXF6InGh';
