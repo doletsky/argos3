@@ -591,15 +591,26 @@ $(document).ready(function() {
 		$('#rekl_item_block_wrapper').append('<div class="rekl_item_block"><table class="item"><tr><td>Наименование</td><td>Последние 3 цифры спецификации<div class="btn_show_info"><div class="btn_show_info_text" style="display: none;">информация информация информация 7</div></div></td><td>Номер партии (IP00, IP20)<div class="btn_show_info"><div class="btn_show_info_text" style="display: none;">информация информация информация 7</div></div></td><td>Количество продукции с дефектом</td><td>Общее количество приобретённого вида продукции</td></tr><tr><td><input type="text" name="rekl_item_name_'+name_suff+'" class="rekl_item_name" value=""><div id="search_wrapper"></div></td><td><input type="text" name="rekl_last_num_'+name_suff+'" id="rekl_last_num" value="" disabled /></td><td><input type="text" name="rekl_issue_num_'+name_suff+'" id="rekl_issue_num" value="" disabled /></td><td><input type="text" name="rekl_def_num_'+name_suff+'" id="rekl_def_num" value=""> шт.</td><td><input type="text" name="rekl_all_num_'+name_suff+'" id="rekl_all_num" value=""> шт.</td></tr></table><div class="checkboxes"><label for="rekl_first_on_'+name_suff+'" class="pseudo_check_reclam marg_check"><input type="checkbox" name="rekl_first_on_'+name_suff+'" id="rekl_first_on_'+name_suff+'" style="">Не работает при первом включении</label><label for="rekl_stop_after_'+name_suff+'" class="pseudo_check_reclam marg_check" style="float: left;"><input type="checkbox" name="rekl_stop_after_'+name_suff+'" id="rekl_stop_after_'+name_suff+'" style=""/>Перестал работать через</label><label style="float: left; display: block; margin-top: 15px; font: normal 12px/18px Arial; margin-bottom: 26px;"><input type="text" name="rekl_stop_days_'+name_suff+'" id="rekl_stop_days_1" style="width: 20px; margin: -2px 10px 0 10px;"/>дней</label></div><div class="rekl_field textarea"><div class="field_title textarea">Подробное описание дефекта<span class="red">*</span></div><textarea rows="4" cols="40" name="rekl_def_desc_'+name_suff+'" id="rekl_def_desc"></textarea></div><div class="rekl_field textarea"><div class="field_title textarea">Возможные причины возникновения дефекта</div><textarea rows="4" cols="40" name="rekl_def_cause_'+name_suff+'" id="rekl_def_cause"></textarea></div><div class="rekl_field"><div class="field_title">В какой момент был обнаружен дефект  <span class="red">*</span></div><input type="text" name="rekl_def_moment_'+name_suff+'" id="rekl_def_moment" value=""></div><hr/><p class="photo_title">Описание дефекта должно быть подтверждено фотографическими изображениями (.jpg, .png, .gif до 5Мб).</p><div class="rekl_field"><div class="field_title" style="float: left; display: block;">Прикрепите фотографии<span class="red">*</span></div><div class="files_wrapper"><div class="add_file_btn pseudo_inp_file"><span class="sel_f">Выберите файл</span><div class="real_inp_file"><label for=""><input type="file" size="0" value="" name="rekl_def_photo_'+name_suff+'[]"></label></div></div></div><input type="button" id="add_file" value="" /></div><input type="button" value="Удалить позицию" id="del_position"></div>');
 		name_suff++;
 	});
-	
+
+    //инициализация чекбокса в рекламации
+    $('.pseudo_check_reclam:first').find('input').attr('checked', true);
+    $('.pseudo_check_reclam:first').addClass('check');
+
 	//псевдо чекбокс в рекламации
-	$('.pseudo_check_reclam').live('click',function(){	
+	$('.pseudo_check_reclam').live('click',function(){
+        console.log('script_new: '+$(this).find("input").is(':checked'));
 		if($(this).find("input").is(':checked')) //если чекбокс не отмечен
 		{
+            $('.pseudo_check_reclam input').attr('checked', false);
+            $('.pseudo_check_reclam').removeClass('check');
+            $(this).find("input").attr('checked', true);
 			$(this).addClass('check');
 		}
 		else
 		{
+            $('.pseudo_check_reclam input').attr('checked', true);
+            $('.pseudo_check_reclam').addClass('check');
+            $(this).find("input").attr('checked', false);
 			$(this).removeClass('check');
 		}
 	})
