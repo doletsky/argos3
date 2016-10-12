@@ -605,6 +605,11 @@ $(document).ready(function() {
             $('.pseudo_check_reclam').removeClass('check');
             $(this).find("input").attr('checked', true);
 			$(this).addClass('check');
+            if($(this).attr('for')=='rekl_stop_after_1'){//если надо указать кол-во дней
+                $('#rekl_stop_days_1').attr('required',true);
+            }else{
+                $('#rekl_stop_days_1').removeAttr('required');
+            }
 		}
 		else
 		{
@@ -612,6 +617,11 @@ $(document).ready(function() {
             $('.pseudo_check_reclam').addClass('check');
             $(this).find("input").attr('checked', false);
 			$(this).removeClass('check');
+            if($(this).attr('for')=='rekl_stop_after_1'){
+                $('#rekl_stop_days_1').removeAttr('required');
+            }else{
+                $('#rekl_stop_days_1').attr('required',true);
+            }
 		}
 	})
 	
@@ -634,6 +644,20 @@ $(document).ready(function() {
 				return false;
 			}
 		})
+
+        if($('#rekl_stop_after_1').is(':checked')){
+            if($('#rekl_stop_days_1').val()==''){
+                err=true;
+                $('#rekl_stop_days_1').addClass('err');
+
+                offset = $('#rekl_stop_days_1').offset();
+                $('body,html').animate({
+                    scrollTop: offset.top - 50
+                }, 400);
+            }else{
+                err=false;
+            }
+        }
 		
 		if(err){
 			return false;
