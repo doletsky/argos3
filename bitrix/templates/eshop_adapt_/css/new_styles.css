@@ -1105,6 +1105,11 @@ ul.point_list li {
 	-khtml-border-radius: 5px;
 	border-radius: 5px;
 }
+.pseudo-select ul.city {
+    height: 520px;
+    overflow: auto;
+}
+
 .pseudo-select.w375 ul {
 	width:373px;
 }

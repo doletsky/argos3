@@ -154,7 +154,7 @@ if(SITE_DIR=='/')
 				<?elseif(!empty($arItem["VALUES"]) && !isset($arItem["PRICE"])):?>
 					<div class="pseudo-select<?if($arItem["CODE"]=='OBJECT_TYPE')echo' w300 float_l marg_r_15'; if($arItem["CODE"]=='TYPE_OF_LUM')echo' w375 float_l';?>">
 						<div class="select"><?=$arItem["NAME"]?></div>
-						<ul class="options">
+						<ul class="options<?if($arItem["CODE"]=='CITY') echo " city";?>">
 							<li class="all"><span class="check"><?=$arItem["NAME"]?></span></li>
 							<?foreach($arItem["VALUES"] as $val => $ar):?>
 								<li class="lvl2<?echo $ar["DISABLED"] ? ' disabled': ''?>">
