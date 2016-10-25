@@ -9,10 +9,10 @@ $tuneData=array(
             //массивов с правилами дл€ каждого раздела
             "0"=>array(
                 "fileNamXML"=>"sitemap_iblock_2.xml", //им€ файла, который будет перезаписан по новым правилам
-                "mapLinkData"=>array(
-                    "del"=>array(
-                        "id"=>array(
-                            "!!sid"=>array(
+                "mapLinkData"=>array(//массив описывает, как формировать новый файл
+                    "del"=>array(//из старого содержимого удал€ем
+                        "id"=>array(//все ссылки, сформированные из sections или elements с id
+                            "!!sid"=>array(//Ќ≈ на id sections
                                 25, 26, 16, 30, 321
                             )
                         )
