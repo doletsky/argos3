@@ -97,5 +97,6 @@
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/28715076" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
+<script crossorigin="anonymous" async type="text/javascript" src="//api.pozvonim.com/widget/callback/v3/43074ca8bf59cb0c52190db412bc1700/connect" id="check-code-pozvonim" charset="UTF-8"></script>
 </body>
 </html>
