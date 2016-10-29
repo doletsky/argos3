@@ -745,11 +745,9 @@ class SubscribeHandlers
 		);
 	}
 
-if(1||$_GET['dbg']==8){
     //корректор sitemap.xml
     include $_SERVER["DOCUMENT_ROOT"]."/bitrix/php_interface/include/sitemap_correct/class.php";
-    AddEventHandler("iblock", "OnAfterIBlockElementUpdate", Array("SMapCorr", "main"));
-}
+    AddEventHandler("iblock", "OnAfterIBlockElementUpdate", "SMapCorrMain");
 
 
 ?>
