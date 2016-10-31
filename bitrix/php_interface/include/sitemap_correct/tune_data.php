@@ -22,6 +22,16 @@ $tuneData=array(
             )
 
 
+        ),
+        "44"=>array(
+            "fileNamXML"=>"sitemap_iblock_44.xml", //имя файла, который будет перезаписан по новым правилам
+            "mapLinkData"=>array(
+                "0"=>array(
+                    "add"=>array(
+                        "mask"=>array("/catalog/draivery/#ELEMENT_CODE#/")
+                    )
+                )
+            )
         )
     )
 );

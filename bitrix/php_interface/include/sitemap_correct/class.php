@@ -26,7 +26,7 @@ $xmlNew=new SimpleXMLElement($xmlstr);
                         $func($xml,$rules);
                     }
                 }
-                file_put_contents($_SERVER["DOCUMENT_ROOT"]."/bitrix/php_interface/include/sitemap_correct/debugLogData.txt", print_r($mArFields,true).print_r($xml,true).PHP_EOL.$xml->asXML());
+                file_put_contents($_SERVER["DOCUMENT_ROOT"]."/sitemap_new/".$val["fileNamXML"], $xmlNew->asXML());
             }else{
                 file_put_contents($_SERVER["DOCUMENT_ROOT"]."/bitrix/php_interface/include/sitemap_correct/debugLogData.txt", "do not correcting");
             }
@@ -49,11 +49,13 @@ $xmlNew=new SimpleXMLElement($xmlstr);
                             foreach($xmlObj->url as $url){
                                 foreach($arStr as $str){
                                     if(substr_count((string)$url->loc, $str)!=0){
-                                        //удаление из xml объекта
-                                        $cnt=count($xmlNew);
-                                        $xmlNew->addChild('url');
-                                        $xmlNew->url[$cnt]->addChild($xmlObj->url[$i]->children()[0]->getName(), (string)$xmlObj->url[$i]->children()[0]);
-                                        $xmlNew->url[$cnt]->addChild($xmlObj->url[$i]->children()[1]->getName(), (string)$xmlObj->url[$i]->children()[1]);
+
+                                        addLinkXML($xmlNew, (string)$xmlObj->url[$i]->children()[0], (string)$xmlObj->url[$i]->children()[1]);
+
+//                                        $cnt=count($xmlNew);
+//                                        $xmlNew->addChild('url');
+//                                        $xmlNew->url[$cnt]->addChild($xmlObj->url[$i]->children()[0]->getName(), (string)$xmlObj->url[$i]->children()[0]);
+//                                        $xmlNew->url[$cnt]->addChild($xmlObj->url[$i]->children()[1]->getName(), (string)$xmlObj->url[$i]->children()[1]);
 //                                        file_put_contents($_SERVER["DOCUMENT_ROOT"]."/bitrix/php_interface/include/sitemap_correct/debugLogXML"."_".$i.".txt", substr_count((string)$url->loc, $str).print_r($xmlObj->url[$i], true));
 //                                        $arI[]=$i;
 //                                    }else{
@@ -119,3 +121,11 @@ $xmlNew=new SimpleXMLElement($xmlstr);
     function eid($arEid){
 
     }
+
+function addLinkXML($xObj, $loc, $lastmod){
+    $cnt=count($xObj);
+    $xObj->addChild('url');
+    $xObj->url[$cnt]->addChild('loc', $loc);
+    $xObj->url[$cnt]->addChild('lastmod', $lastmod);
+    return $xObj;
+}
