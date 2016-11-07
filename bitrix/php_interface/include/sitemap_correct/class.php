@@ -5,12 +5,16 @@ $xmlstr = <<< XML
 <?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>
 XML;
 $xmlNew=new SimpleXMLElement($xmlstr);
+
+$BID=0;//id блока, с которым работаем в данный момент
     // проверка на необходимость корректировки
     function SMapCorrMain(&$arFields)//готовит данные для определения необходимых действий и вызывает их
     {
         global $tuneData;
         global $xmlNew;
+        global $BID;
         $mArFields=$arFields;
+        $BID=$mArFields['IBLOCK_ID'];
 
             if(is_array($tuneData['IBLOCK'][$mArFields['IBLOCK_ID']])){//если в настройках такой ИБ есть
                 $val=$tuneData['IBLOCK'][$mArFields['IBLOCK_ID']];
@@ -27,9 +31,10 @@ $xmlNew=new SimpleXMLElement($xmlstr);
                     }
                 }
                 file_put_contents($_SERVER["DOCUMENT_ROOT"]."/sitemap_new/".$val["fileNamXML"], $xmlNew->asXML());
-            }else{
-                file_put_contents($_SERVER["DOCUMENT_ROOT"]."/bitrix/php_interface/include/sitemap_correct/debugLogData.txt", "do not correcting");
             }
+//            else{
+//                file_put_contents($_SERVER["DOCUMENT_ROOT"]."/bitrix/php_interface/include/sitemap_correct/debugLogData.txt", "do not correcting");
+//            }
 
     }
 
@@ -74,11 +79,16 @@ $xmlNew=new SimpleXMLElement($xmlstr);
 
         }
 
-        file_put_contents($_SERVER["DOCUMENT_ROOT"]."/bitrix/php_interface/include/sitemap_correct/debugLogXML.txt", print_r($arDel,true).PHP_EOL.count($xmlNew).PHP_EOL.$xmlNew->asXML());
+
     }
 
     function add($xmlObj, $arRule){
-
+        global $xmlNew;
+        $arAdd=array();
+        foreach($arRule as $fRule=>$dRule){
+            $arAdd[$fRule]=$fRule($arRule[$fRule]);
+        }
+        file_put_contents($_SERVER["DOCUMENT_ROOT"]."/bitrix/php_interface/include/sitemap_correct/debugLogXML.txt", print_r($arAdd,true).PHP_EOL.count($xmlNew).PHP_EOL.$xmlNew->asXML());
     }
 
     function repl($xmlObj, $arRule){
@@ -86,7 +96,27 @@ $xmlNew=new SimpleXMLElement($xmlstr);
     }
 
     function mask($arMask){
+        global $BID;
 
+        foreach($arMask as $k=>$strMask){
+            //проверка на наличие шаблона в символах #
+            if(substr_count($strMask, '#ELEMENT_CODE#')>0){
+                $arFilter = Array(
+                    "IBLOCK_ID"=>$BID,
+                    "ACTIVE"=>"Y"
+                );
+                $res = CIBlockElement::GetList(Array("SORT"=>"ASC"), $arFilter);
+                while($ar_fields = $res->GetNext())
+                {
+                    $arMask['LINKS'][]= array(
+                        str_replace('#ELEMENT_CODE#',$ar_fields["CODE"], $strMask),
+                        $ar_fields["TIMESTAMP_X"]
+                    );
+                }
+            }
+        }
+//        $arMask["IB"]=$BID;
+        return $arMask;
     }
     function id($arId){
         $rData=array();
