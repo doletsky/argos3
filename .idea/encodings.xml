@@ -2,7 +2,10 @@
 <project version="4">
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
     <file url="file://$PROJECT_DIR$/bitrix/php_interface/include/sitemap_correct/class.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bitrix/php_interface/include/sitemap_correct/debugLogXML.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bitrix/php_interface/include/sitemap_correct/debugMask.txt" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/bitrix/php_interface/include/sitemap_correct/tune_data.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dompdf_lib/test.html" charset="UTF-8" />
   </component>
 </project>
 
