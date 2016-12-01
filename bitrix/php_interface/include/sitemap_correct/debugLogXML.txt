@@ -1,0 +1,182 @@
+Array
+(
+    [mask] => Array
+        (
+            [0] => Array
+                (
+                    [0] => /production/catalog_online/svetodiodnye/moduli/seriya_seoul/?view=new&offers_id=1999
+                    [1] => 2016-09-12Т13:21:19+03:00
+                )
+
+            [1] => Array
+                (
+                    [0] => /production/catalog_online/svetodiodnye/moduli/seriya_edisson/?view=new&offers_id=4619
+                    [1] => 2016-09-12Т14:36:16+03:00
+                )
+
+            [2] => Array
+                (
+                    [0] => /production/catalog_online/svetodiodnye/moduli/seriya_seoul/?view=new&offers_id=1988
+                    [1] => 2016-09-12Т13:32:29+03:00
+                )
+
+            [3] => Array
+                (
+                    [0] => /production/catalog_online/svetodiodnye/moduli/seriya_edisson/?view=new&offers_id=4620
+                    [1] => 2016-09-12Т14:16:40+03:00
+                )
+
+            [4] => Array
+                (
+                    [0] => /production/catalog_online/svetodiodnye/moduli/seriya_seoul/?view=new&offers_id=2003
+                    [1] => 2016-09-12Т13:33:24+03:00
+                )
+
+            [5] => Array
+                (
+                    [0] => /production/catalog_online/svetodiodnye/moduli/seriya_edisson/?view=new&offers_id=4625
+                    [1] => 2016-09-12Т14:16:40+03:00
+                )
+
+            [6] => Array
+                (
+                    [0] => /production/catalog_online/svetodiodnye/moduli/seriya_seoul/?view=new&offers_id=1993
+                    [1] => 2016-10-01Т11:16:08+03:00
+                )
+
+            [7] => Array
+                (
+                    [0] => /production/catalog_online/svetodiodnye/moduli/seriya_edisson/?view=new&offers_id=4623
+                    [1] => 2016-09-12Т14:16:40+03:00
+                )
+
+            [8] => Array
+                (
+                    [0] => /production/catalog_online/svetodiodnye/moduli/seriya_edisson/?view=new&offers_id=8001
+                    [1] => 2016-09-12Т14:16:40+03:00
+                )
+
+            [9] => Array
+                (
+                    [0] => /production/catalog_online/svetodiodnye/moduli/seriya_edisson/?view=new&offers_id=8004
+                    [1] => 2016-09-12Т14:16:41+03:00
+                )
+
+            [10] => Array
+                (
+                    [0] => /production/catalog_online/svetodiodnye/moduli/seriya_edisson/?view=new&offers_id=8005
+                    [1] => 2016-09-12Т14:16:41+03:00
+                )
+
+            [11] => Array
+                (
+                    [0] => /production/catalog_online/svetodiodnye/moduli/seriya_edisson/?view=new&offers_id=8006
+                    [1] => 2016-09-12Т14:16:41+03:00
+                )
+
+            [12] => Array
+                (
+                    [0] => /production/catalog_online/svetodiodnye_svetilniki_zhkkh/seriya_domovykh_svetodiodnykh_svetilnikov_standart_zhkkh/?view=new&offers_id=2504
+                    [1] => 2016-11-10Т22:55:44+03:00
+                )
+
+            [13] => Array
+                (
+                    [0] => /production/catalog_online/svetodiodnye_svetilniki_zhkkh/seriya_domovykh_universalnykh_svetilnikov_nbb_s_datchikom/?view=new&offers_id=1078
+                    [1] => 2016-09-23Т16:35:10+03:00
+                )
+
+            [14] => Array
+                (
+                    [0] => /production/catalog_online/svetodiodnye_svetilniki_zhkkh/seriya_domovykh_led_svetilnikov_sfera_zhkkh/?view=new&offers_id=1059
+                    [1] => 2016-11-09Т22:24:13+03:00
+                )
+
+            [15] => Array
+                (
+                    [0] => /production/catalog_online/datchiki/svetozvukovoy_datchik_szvo/?view=new&offers_id=2407
+                    [1] => 2016-11-08Т19:29:03+03:00
+                )
+
+            [16] => Array
+                (
+                    [0] => /production/catalog_online/svetodiodnye_svetilniki_zhkkh/seriya_domovykh_svetodiodnykh_svetilnikov_s_datchikom_intellekt_zhkkh_/?view=new&offers_id=3376
+                    [1] => 2016-11-09Т23:32:36+03:00
+                )
+
+            [17] => Array
+                (
+                    [0] => /production/catalog_online/svetodiodnye_svetilniki_zhkkh/seriya_svetodiodnykh_svetilnikov_ekonom_zhkkh/?view=new&offers_id=4906
+                    [1] => 2016-10-24Т12:19:51+03:00
+                )
+
+            [18] => Array
+                (
+                    [0] => /production/catalog_online/svetodiodnye_svetilniki_zhkkh/demonstratsionnyy_stend_svetilniki_zhkkh_datchiki/?view=new&offers_id=7997
+                    [1] => 2016-11-08Т19:41:04+03:00
+                )
+
+            [19] => Array
+                (
+                    [0] => /production/catalog_online/svetodiodnye_svetilniki_zhkkh/antivandalnye_svetilniki_dlya_zhkkh/?view=new&offers_id=8287
+                    [1] => 2016-08-05Т14:49:45+03:00
+                )
+
+        )
+
+    [id] => Array
+        (
+            [0] => Array
+                (
+                    [0] => /production/catalog_online/svetodiodnye_svetilniki_zhkkh/seriya_domovykh_svetodiodnykh_svetilnikov_standart_zhkkh/?view=new&offers_id=2504
+                    [1] => 2016-11-10Т22:55:44+03:00
+                )
+
+            [1] => Array
+                (
+                    [0] => /production/catalog_online/svetodiodnye_svetilniki_zhkkh/seriya_domovykh_universalnykh_svetilnikov_nbb_s_datchikom/?view=new&offers_id=1078
+                    [1] => 2016-09-23Т16:35:10+03:00
+                )
+
+            [2] => Array
+                (
+                    [0] => /production/catalog_online/svetodiodnye_svetilniki_zhkkh/seriya_domovykh_led_svetilnikov_sfera_zhkkh/?view=new&offers_id=1059
+                    [1] => 2016-11-09Т22:24:13+03:00
+                )
+
+            [3] => Array
+                (
+                    [0] => /production/catalog_online/datchiki/svetozvukovoy_datchik_szvo/?view=new&offers_id=2407
+                    [1] => 2016-11-08Т19:29:03+03:00
+                )
+
+            [4] => Array
+                (
+                    [0] => /production/catalog_online/svetodiodnye_svetilniki_zhkkh/seriya_domovykh_svetodiodnykh_svetilnikov_s_datchikom_intellekt_zhkkh_/?view=new&offers_id=3376
+                    [1] => 2016-11-09Т23:32:36+03:00
+                )
+
+            [5] => Array
+                (
+                    [0] => /production/catalog_online/svetodiodnye_svetilniki_zhkkh/seriya_svetodiodnykh_svetilnikov_ekonom_zhkkh/?view=new&offers_id=4906
+                    [1] => 2016-10-24Т12:19:51+03:00
+                )
+
+            [6] => Array
+                (
+                    [0] => /production/catalog_online/svetodiodnye_svetilniki_zhkkh/demonstratsionnyy_stend_svetilniki_zhkkh_datchiki/?view=new&offers_id=7997
+                    [1] => 2016-11-08Т19:41:04+03:00
+                )
+
+            [7] => Array
+                (
+                    [0] => /production/catalog_online/svetodiodnye_svetilniki_zhkkh/antivandalnye_svetilniki_dlya_zhkkh/?view=new&offers_id=8287
+                    [1] => 2016-08-05Т14:49:45+03:00
+                )
+
+        )
+
+)
+
+1
+1
